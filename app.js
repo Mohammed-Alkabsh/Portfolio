@@ -9,7 +9,7 @@ var express = require("express"),
 //connecting to mongoDB
 //mongoose.connect("mongodb://localhost/portfolio", {useNewUrlParser: true});
 //mlab database
-mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds253324.mlab.com:53324/portfolio", {userNewUrlParser: true});
+mongoose.connect("mongodb://Mohammed:DNG06212010@ds253324.mlab.com:53324/portfolio", {useNewUrlParser: true});
 
 app.use(require("express-session")({
     secret: "Don't, hate on a nigga... that is a weak emotion, the lady in a nigga.",

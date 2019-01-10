@@ -47,7 +47,7 @@
 
         <div class="container">
             <div class="header">
-                <h1>Welcome back <p><%= Owner[0].username %></p></h1>
+                <h1>Welcome back <p><%= Owner.username %></p></h1>
                 <h3>Time of refresh: <% var now = new Date(); %><%= now.getHours() - 6 %>:<%= (now.getMinutes() < 10? '0' : '') + now.getMinutes();%></h3>
             </div>
             <div class="row messages-container">
