@@ -1,0 +1,227 @@
+
+<% include partials/header %>
+
+    	<div id="mainCanvas">
+    		<div class="welcome">
+    			<h1 class="introduction">Hello, I'm <span class="title">Mohammed Alkabsh</span>.<br>
+    			I'm a Web Developer.</h1><br>
+    			<a href="#about" class="view-work-button">View my work <i class="fas fa-arrow-right"></i></a>
+    
+    		</div>
+    	</div>
+    
+    	<nav class="navbar navbar-expand-md navbar-light sticky-top">
+    		<div class="container-fluid">
+    			<div class="navbar-header">
+    	    		<a class="navbar-brand" href="#"><span class="name-logo">M</span> Alkabsh</a>
+    			</div>
+    	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    	    		<span class="navbar-toggler-icon"></span>
+    	  		</button>
+    	    	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			    <ul class="navbar-nav ml-auto">
+    			    	<li class="nav-item active"><a class="nav-link" href="#mainCanvas">Home</a></li>
+    			        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+    			        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+    			        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    			    </ul>
+    	    	</div>
+        	</div>
+    	</nav>
+    	<div id="about">
+    		<div class="container">
+    			<div class="header-container">
+    				<h1 class="about-header headers disappear animated">About</h1>
+    				<div class="about-underline underlines disappear animated"></div>
+    			</div>
+    			<div class="row work-cards-wrapper">
+    				<div class="col-lg-3 col-md-6 col-sm-6 col-6 work-cards">
+    					<div class="card-images disappear animated">
+    						<div class="hexagon">
+    							<div class="inner-hex">
+    								<div class="inner-inner-hex">
+    									<i class="fa fa-fast-forward"></i>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="card-disc disappear animated">
+    						<h2 class="card-heading">Fast</h2>
+    						<p class="card-detail">All my websites are gunna be lightning fast.</p>
+    					</div>
+    				</div>
+    				<div class="col-lg-3 col-md-6 col-sm-6 col-6 work-cards">
+    					<div class="card-images disappear animated" style="animation-delay: 0.2s">
+    						<div class="hexagon animated">
+    							<div class="inner-hex">
+    								<div class="inner-inner-hex">
+    									<i class="fa fa-desktop"></i>
+    									<i class="fa fa-mobile-alt"></i>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="card-disc disappear animated" style="animation-delay: 0.2s">
+    						<h2 class="card-heading">Responsive</h2>
+    						<p class="card-detail">My designs are tailored to fit on any device, no matter the size.</p>
+    					</div>
+    				</div>
+    				<div class="col-lg-3 col-md-6 col-sm-6 col-6 work-cards">
+    					<div class="card-images disappear animated" style="animation-delay: 0.4s">
+    						<div class="hexagon animated">
+    							<div class="inner-hex">
+    								<div class="inner-inner-hex">
+    									<i class="fa fa-lightbulb"></i>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="card-disc disappear animated" style="animation-delay: 0.4s">
+    						<h2 class="card-heading">Intuitive</h2>
+    						<p class="card-detail">Strong preference for easy to use UX/UI designs</p>
+    					</div>
+    				</div>
+    				<div class="col-lg-3 col-md-6 col-sm-6 col-6 work-cards">
+    					<div class="card-images disappear animated" style="animation-delay: 0.6s">
+    						<div class="hexagon animated">
+    							<div class="inner-hex">
+    								<div class="inner-inner-hex">
+    									<i class="fa fa-space-shuttle"></i>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="card-disc disappear animated" style="animation-delay: 0.6s">
+    						<h2 class="card-heading">Dynamic</h2>
+    						<p class="card-detail">Websites don't have to be static, I love making websites come to life.</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="row bio-and-stats">
+    				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 bio-cont disappear animated">
+    					<div class="pic-hex">
+    						<div class="inner-pic-hex">
+    							<div class="inner-inner-pic-hex"></div>
+    						</div>
+    					</div>
+    					<h3 class="sarcasm disappear animated">Who's this guy?</h3>
+    					<p class="my-disc disappear animated">
+    						I'm a freelance web developer.  I have a serious passion for making websites that are not only captivating to look at, but also easy to use.
+    						Able to build any website of any scale so <span class="enf">dream big</span> and <span class="enf">lets build something amazing</span>.
+    					</p>
+    				</div>
+    				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 stats-cont disappear animated">
+    					<ul class="skills-list">
+    						<li class="skill">
+    							<div class="skill-name">
+    								<h6>HTML</h6>
+    							</div>
+    							<div id="html-progress" class="skill-progress"></div>
+    							<div class="percentage"><span class="percent"></span></div>
+    						</li>
+    						<li class="skill">
+    							<div class="skill-name">
+    								<h6>CSS</h6>
+    							</div>
+    							<div id="css-progress" class="skill-progress"></div>
+    							<div class="percentage"><span class="percent"></span></div>
+    						</li>
+    						<li class="skill">
+    							<div class="skill-name">
+    								<h6>JavaScript</h6>
+    							</div>
+    							<div id="javascript-progress" class="skill-progress"></div>
+    							<div class="percentage"><span class="percent"></span></div>
+    						</li>
+    						<li class="skill">
+    							<div class="skill-name">
+    								<h6>Bootstrap</h6>
+    							</div>
+    							<div id="bootstrap-progress" class="skill-progress"></div>
+    							<div class="percentage"><span class="percent"></span></div>
+    						</li>
+    						<li class="skill">
+    							<div class="skill-name">
+    								<h6>JQuery</h6>
+    							</div>
+    							<div id="jquery-progress" class="skill-progress"></div>
+    							<div class="percentage"><span class="percent"></span></div>
+    						</li>
+    						<li class="skill">
+    							<div class="skill-name">
+    								<h6>Node</h6>
+    							</div>
+    							<div id="node-progress" class="skill-progress"></div>
+    							<div class="percentage"><span class="percent"></span></div>
+    						</li>
+    						<li class="skill">
+    							<div class="skill-name">
+    								<h6>Express</h6>
+    							</div>
+    							<div id="express-progress" class="skill-progress"></div>
+    							<div class="percentage"><span class="percent"></span></div>
+    						</li>
+    						<li class="skill">
+    							<div class="skill-name">
+    								<h6>MongoDB</h6>
+    							</div>
+    							<div id="mongodb-progress" class="skill-progress"></div>
+    							<div class="percentage"><span class="percent"></span></div>
+    						</li>
+    						<li class="skill">
+    							<div class="skill-name">
+    								<h6>GIT</h6>
+    							</div>
+    							<div id="git-progress" class="skill-progress"></div>
+    							<div class="percentage"><span class="percent"></span></div>
+    						</li>
+    					</ul>
+    				</div>
+    			</div>
+    		</div>		
+    	</div>
+    	<div id="projects">
+    		<div class="container">
+    			<div class="header-container">
+    				<h1 class="projects-header headers disappear animated">Projects</h1>
+    				<div class="project-underline underlines disappear animated"></div>
+    			</div>
+    			<div class="row projects-wrapper">
+    				<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 yelpcamp-image disappear animated project web">
+    					<div class="top-half">
+    						<h4 class="project-name">YelpCamp</h4>
+    						<h6 class="languages-used">JavaScript/bootstrap4</h6>
+    					</div>
+    					<div class="bottom-half">
+    						<a href="https://serene-hollows-58536.herokuapp.com/" class="learn-more-button">LEARN MORE</a>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div id="contact">
+    		<svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+    	  		<path d="M0 0 L50 100 L100 0 Z" fill="#A18B7C" stroke="#A18B7C"></path>
+    		</svg>
+    		<div class="container">
+    			<div class="header-container">
+    				<h1 class="contact-header headers disappear animated">Contact</h1>
+    				<div class="contact-underline underlines disappear animated"></div>
+    			</div>
+    			<div>
+    				<p class="have-a-question disappear animated">Have a question or want to get together?</p>
+    	        </div>
+    			<div class="row contact-me-wrapper">
+    				<form class="col-lg-5 col-md-6 col-sm-10 col-xs-12 disappear animated" action="/" method="POST">
+    					<input class="inputs" type="text" name="name" placeholder="Name">
+    					<input class="inputs" type="email" name="email" placeholder="E-mail">
+    					<textarea class="inputs" name="message" placeholder="Your message"></textarea>
+    					<input class="btn form-button" type="submit">
+    				</form>
+    				
+    			</div>
+    		</div>
+    	</div>
+    	
+    	<% include partials/footer %>
+	

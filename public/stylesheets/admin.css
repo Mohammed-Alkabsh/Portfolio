@@ -1,0 +1,40 @@
+body{
+    background-color: #25274d;
+    background-color: #aaabb8;
+}
+.header{
+    text-align: center;
+    background: yellow;
+}
+h1{
+    margin: 30px auto 20px auto;
+    color: #2e9cca;
+    text-align: center;
+}
+h6{
+    color: #25274d;
+}
+form{
+    margin-top: 15vh;
+    background-color: #29648a;
+    background-color: #25274d;
+    box-shadow: 2px 4px 8px #25274d;
+    padding: 40px 20px;
+}
+
+.btn-block{
+    margin-top: 30px;
+}
+
+.login-heading h4{
+    text-align: center;
+    color: #2e9cca;
+    margin-bottom: 20px;
+}
+a{
+    color: #29648a;
+    text-decoration: none;
+}
+a:hover{
+    color: #25274d;
+}

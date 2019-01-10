@@ -1,0 +1,60 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(180deg, #efedef, #4c4947);
+    
+}
+nav{
+    background-color: #4c4947;
+}
+.header{
+    text-align: center;
+    max-width: 500px;
+    margin: 20px auto;
+    color: #4c4947;
+}
+h1 p{
+    color: #6ead3a;
+}
+.messages-container{
+    margin-top: 50px;
+}
+.message{
+    position: relative;
+    background-image: linear-gradient(70deg, #4c4947, #6ead3a);
+    min-height: 200px;
+    border: 1px solid #efedef;
+    border-radius: 5px;
+    padding: 20px 10px;
+    margin: 2px auto;
+}
+.name-cont{
+    background-color: #efedef;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+#name{
+    color: #6ead3a;
+    font-weight: bolder;
+}
+#email{
+    color: #222022;
+}
+.message-cont{
+    margin-top: 10px;
+    min-height: 70px;
+    background-color: #efedef;
+    color: #4c4947;
+    padding-left: 5px;
+    overflow: scroll;
+    border-radius: 5px;
+}
+.message span{
+    position: absolute;
+    bottom: 20px;
+    color: #efedef;
+    
+}
+p{
+    margin: 0;
+}
