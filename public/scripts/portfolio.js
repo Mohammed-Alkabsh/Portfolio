@@ -159,7 +159,7 @@ doc.on("scroll", function(){
     if( doc.scrollTop() >= 2050 ){
       $(".projects-header").siblings().removeClass("disappear").addClass("fadeInRightBig");
     }
-    if( doc.scrollTop() >= 2300 ){
+    if( doc.scrollTop() >= 2150 ){
       $(".yelpcamp-image").removeClass("disappear").addClass("fadeInUp");
     }
     if( doc.scrollTop() >= 2700 ){

@@ -21,7 +21,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Permanent+Marker|Play" rel="stylesheet">
 		<!--My Portfolio Stylesheet-->
 		<link rel="stylesheet" href="/stylesheets/dash.css">
-		<title>Mohammed Alkabsh | Dev</title>
+		<title>Mohammed Alkabsh | Dash</title>
 	</head>
 	<body>
 		
@@ -47,7 +47,7 @@
 
         <div class="container">
             <div class="header">
-                <h2>Welcome back <%= Owner[0].username %> </h2>
+                <h2>Welcome back <%= Owner.username %> </h2>
                 <h3>Time of refresh: <%var dt = new Date();%><%=dt.getHours() - 6%>:<%= (dt.getMinutes() < 10 ? '0' : '') + dt.getMinutes();%></h3>
             </div>
             <div class="row messages-container">

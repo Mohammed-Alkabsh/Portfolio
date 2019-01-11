@@ -9,8 +9,8 @@ var express = require("express"),
     
 //connecting to mongoDB
 //mongoose.connect("mongodb://localhost/portfolio", {useNewUrlParser: true});
-mongoose.connect("mongodb://Mohammed:DNG06212010@ds253324.mlab.com:53324/portfolio", {useNewUrlParser: true});
-
+//Connecting to Mlab mongodb
+mongoose.connect("mongodb://Mohammed:DNG06212010@ds253324.mlab.com:53324/portfolio", {useNewUrlParser: true})
 app.use(require("express-session")({
     secret: "Don't, hate on a nigga... that is a weak emotion, the lady in a nigga.",
     resave: false,
@@ -149,6 +149,11 @@ app.get("/logout", function(req, res){
     res.redirect("/");
 });
 
+//Anything else
+app.get("/:anything", function(req, res){
+    req.flash("error", "The page you were trying to visit is invalid");
+    res.redirect("/");
+})
 
 //Middleware
 function isLoggedIn(req, res, next){
