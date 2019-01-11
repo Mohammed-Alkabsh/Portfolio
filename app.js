@@ -1,5 +1,6 @@
 var express = require("express"),
     mongoose = require("mongoose"),
+    flash = require("connect-flash"),
     bodyParser = require("body-parser"),
     passport = require("passport"),
     localStrategy = require("passport-local"),
@@ -7,9 +8,7 @@ var express = require("express"),
     app = express();
     
 //connecting to mongoDB
-//mongoose.connect("mongodb://localhost/portfolio", {useNewUrlParser: true});
-//mlab database
-mongoose.connect("mongodb://Mohammed:DNG06212010@ds253324.mlab.com:53324/portfolio", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost/portfolio", {useNewUrlParser: true});
 
 app.use(require("express-session")({
     secret: "Don't, hate on a nigga... that is a weak emotion, the lady in a nigga.",
@@ -41,6 +40,7 @@ var Owner = new mongoose.model("Owner", ownerSchema);
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+app.use(flash());
 
 //Authentication
 app.use(passport.initialize());
@@ -48,6 +48,13 @@ app.use(passport.session());
 passport.use(new localStrategy(Owner.authenticate()))
 passport.serializeUser(Owner.serializeUser());
 passport.deserializeUser(Owner.deserializeUser());
+
+//Passing middleware to all templates
+app.use(function(req, res, next){
+    req.app.locals.error = req.flash("error");
+    req.app.locals.success = req.flash("success");
+    next();
+});
 
 
 app.get("/", function(req, res){
@@ -65,7 +72,7 @@ app.post("/", function(req, res){
         email: email,
         message: message,
         date: {
-            minute: (today.getMinutes() < 10? '0' : '') + today.getMinutes(),
+            minute: (today.getMinutes() < 10 ? '0' : '') + today.getMinutes(),
             hour: today.getHours() - 6,
             day: today.getDate(),
             month: today.getMonth() + 1,
@@ -76,6 +83,7 @@ app.post("/", function(req, res){
             console.log(err);
         }
         else{
+            req.flash("success", "Your message has been sent");
             res.redirect("/");
         }
     });

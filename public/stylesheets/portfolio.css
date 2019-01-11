@@ -14,7 +14,8 @@ body{
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-
+	padding-top: 50px;
+	box-sizing: border-box;
 }
 .welcome{
 	display: inline-block;
@@ -252,35 +253,35 @@ nav{
     transition-delay: 0.7s;
 }
 #css-progress{
-    transition-delay: 0.9s;
+    transition-delay: 0.8s;
 }
 #javascript-progress{
-    transition-delay: 1.1s;
+    transition-delay: 0.9s;
 }
 #bootstrap-progress{
-    transition-delay: 1.3s;
+    transition-delay: 1s;
 }
 #jquery-progress{
-    transition-delay: 1.5s;
+    transition-delay: 1.1s;
 }
 #node-progress{
-    transition-delay: 1.7s;
+    transition-delay: 1.2s;
 }
 #express-progress{
-    transition-delay: 1.9s;
+    transition-delay: 1.3s;
 }
 #mongodb-progress{
-    transition-delay: 2.1s;
+    transition-delay: 1.4s;
 }
 #git-progress{
-    transition-delay: 2.3s;
+    transition-delay: 1.5s;
 }
 .skill-progress{
 	grid-area: perc;
 	width: 0%;
 	height: 100%;
 	background-color: #76323f;
-	transition: width 0.7s ease-in;
+	transition: width 0.5s ease-in-out;
 }
 .percentage{
 	grid-area: perDisc;
@@ -306,7 +307,6 @@ nav{
 	background-color: #f3f7f8;
 	color: #21c2f8;
 	padding: 5px 10px;
-	border: none;
 	margin: 0 auto;
 	border: 2px solid #f3f7f8;
 	transition: all 0.3s;
@@ -559,8 +559,11 @@ footer{
 	}
 	.card-heading{
 		margin: 10px auto;
-		font-size: 25px;
+		font-size: 21px;
 		font-weight: bolder;
+	}
+	.card-detail{
+		font-size: 13px;
 	}
 	.pic-hex{
 		margin-top: -15px;

@@ -2,6 +2,15 @@
 <% include partials/header %>
 
     	<div id="mainCanvas">
+    	    <div class="container flash-message">
+    	        <% if(error && error.length > 0){ %>
+        	        <div class="alert alert-danger" role="alert"><%=error%></div>
+        	    <% } %>
+        	    
+        	    <% if(success && success.length > 0){ %>
+        	        <div class="alert alert-success" role="alert"><%=success%></div>
+        	    <% } %>
+    	    </div>
     		<div class="welcome">
     			<h1 class="introduction">Hello, I'm <span class="title">Mohammed Alkabsh</span>.<br>
     			I'm a Web Developer.</h1><br>

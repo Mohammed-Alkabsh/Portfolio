@@ -47,8 +47,8 @@
 
         <div class="container">
             <div class="header">
-                <h1>Welcome back <p><%= Owner.username %></p></h1>
-                <h3>Time of refresh: <% var now = new Date(); %><%= now.getHours() - 6 %>:<%= (now.getMinutes() < 10? '0' : '') + now.getMinutes();%></h3>
+                <h2>Welcome back <%= Owner[0].username %> </h2>
+                <h3>Time of refresh: <%var dt = new Date();%><%=dt.getHours() - 6%>:<%= (dt.getMinutes() < 10 ? '0' : '') + dt.getMinutes();%></h3>
             </div>
             <div class="row messages-container">
             
@@ -56,14 +56,18 @@
                     <div class="col-lg-7 col-md-8 col-sm-10 col-12 message">
                         <div class="name-cont">
                             <p id="name"><%= customer[i].name %></p>
-                            <div class="email-cont">
-                                <p id="email"><%= customer[i].email %></p>
-                            </div>
+                        </div>
+                        <span id="date-sent">
+                        	<span class="time"><%=customer[i].date.hour%>:<%=customer[i].date.minute%></span> 
+                        	<i><%= customer[i].date.month %>/ <%= customer[i].date.day %>/ <%= customer[i].date.year %></i>
+                        </span>
+
+                        <div class="email-cont">
+                            <p id="email"><%= customer[i].email %></p>
                         </div>
                         <div class="message-cont">
                             <p><%= customer[i].message %></p>
                         </div>
-                        <span><%=customer[i].date.hour%>: <%=customer[i].date.minute%>  <i><%= customer[i].date.month %>/<%= customer[i].date.day %>/<%= customer[i].date.year %></i></span>
                     </div>
                     
                 <% } %>

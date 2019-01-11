@@ -116,31 +116,31 @@ doc.on("scroll", function(){
   console.log(doc.scrollTop());
   if ( screen.width <= 600 ){
     console.log("small screen");
-    if ( doc.scrollTop() >= 400){
+    if ( doc.scrollTop() >= 180){
       $(".about-header").removeClass("disappear").addClass("fadeInLeftBig");
     }
-    if (doc.scrollTop() >= 450){
+    if (doc.scrollTop() >= 250){
       $(".about-header").siblings().removeClass("disappear").addClass("fadeInLeftBig");
     }
-    if (doc.scrollTop() >= 550){
+    if (doc.scrollTop() >= 350){
       $(".card-images").removeClass("disappear").addClass("flipInY");
     }
-    if (doc.scrollTop() >= 750){
+    if (doc.scrollTop() >= 450){
       $(".card-images").siblings().removeClass("disappear").addClass("flipInX");
     }
-    if (doc.scrollTop() >= 1100){
+    if (doc.scrollTop() >= 900){
       $(".bio-cont").removeClass("disappear").addClass("slideInLeft");
     }
-    if (doc.scrollTop() >= 1270){
+    if (doc.scrollTop() >= 1000){
       $(".sarcasm").removeClass("disappear").addClass("bounceInDown");
     }
-    if (doc.scrollTop() >= 1450){
+    if (doc.scrollTop() >= 1150){
       $(".my-disc").removeClass("disappear").addClass("bounceIn");
     }
     
     
     
-    if (doc.scrollTop() >= 1600){
+    if (doc.scrollTop() >= 1400){
       $(".stats-cont").removeClass("disappear").addClass("slideInRight");
       
       $("#html-progress").css("width", "90%").siblings(".percentage").children().text("90%");
@@ -153,25 +153,25 @@ doc.on("scroll", function(){
       $("#mongodb-progress").css("width", "74%").siblings(".percentage").children().text("74%");
       $("#git-progress").css("width", "59%").siblings(".percentage").children().text("59%");
     }
-    if( doc.scrollTop() >= 2250 ){
+    if( doc.scrollTop() >= 1950 ){
       $(".projects-header").removeClass("disappear").addClass("fadeInRightBig");
     }
-    if( doc.scrollTop() >= 2320 ){
+    if( doc.scrollTop() >= 2050 ){
       $(".projects-header").siblings().removeClass("disappear").addClass("fadeInRightBig");
     }
-    if( doc.scrollTop() >= 2500 ){
+    if( doc.scrollTop() >= 2300 ){
       $(".yelpcamp-image").removeClass("disappear").addClass("fadeInUp");
     }
-    if( doc.scrollTop() >= 3000 ){
+    if( doc.scrollTop() >= 2700 ){
       $(".contact-header").removeClass("disappear").addClass("fadeInLeftBig");
     }
-    if( doc.scrollTop() >= 3070 ){
+    if( doc.scrollTop() >= 2770 ){
       $(".contact-header").siblings().removeClass("disappear").addClass("fadeInRightBig");
     }
-    if( doc.scrollTop() >= 3200 ){
+    if( doc.scrollTop() >= 2900 ){
       $(".have-a-question").removeClass("disappear").addClass("fadeInLeftBig");
     }
-    if( doc.scrollTop() >= 3300 ){
+    if( doc.scrollTop() >= 3000 ){
       $("form").removeClass("disappear").addClass("jackInTheBox");
     }
     
