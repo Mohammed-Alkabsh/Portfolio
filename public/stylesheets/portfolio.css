@@ -10,7 +10,7 @@ body{
 	font-family: "Play", sans-serif;
 	height: 100vh;
 	width: 100%;
-	background-image:linear-gradient(40deg,rgba(32,29,58,0.6),rgba(255,255,255,0.5)),url(/images/cool-background.jpg);
+	background-image:linear-gradient(180deg,rgba(76,182,159,0.7),rgba(32,29,58,0.9)),url(/images/cool-background.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -287,6 +287,7 @@ nav{
 	grid-area: perc;
 	width: 0%;
 	height: 100%;
+	border-radius: 5px;
 	background-color: #4cb69f;
 	transition: width 0.5s ease-in-out;
 }
@@ -335,7 +336,7 @@ nav{
     background-repeat: no-repeat;
 	height: 250px;
 	width: 100%;
-	margin: 0 auto;
+	margin: 10px auto;
 	padding: 0;
 	overflow: hidden;
 }
@@ -364,6 +365,7 @@ nav{
 }
 #natureking{
 	background-image: url(/images/NatureKingWebsite.png);
+	animation-delay: 0.3s;
 }
 .bottom-half{
     position: absolute;
@@ -419,16 +421,20 @@ form{
 .inputs{
     width: 100%;
     margin-top: 5px;
-    background-color: #201d3a;
+    background-color: rgba(32,29,58,0.9);
     padding: 10px 14px;
     border-radius: 4px;
     border: none;
     color: #f5f5f5;
 }
+
+::placeholder{
+	color: #f5f5f5;
+}
 textarea{
     height: 150px;
     border-radius: 4px;
-    background-color: #201d3a;
+    background-color: rgba(32,29,58,0.9);
     padding: 10px 14px;
     border: none;
     color: #f5f5f5;
