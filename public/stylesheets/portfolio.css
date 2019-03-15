@@ -10,7 +10,7 @@ body{
 	font-family: "Play", sans-serif;
 	height: 100vh;
 	width: 100%;
-	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(http://unsplash.s3.amazonaws.com/batch%207/Top_view.jpg);
+	background-image:linear-gradient(40deg,rgba(32,29,58,0.6),rgba(255,255,255,0.5)),url(/images/cool-background.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -31,23 +31,23 @@ body{
 	overflow: hidden;
 }
 .introduction{
-	color: #D8C4AC;
+	color: #ffffff;
 	letter-spacing: 2px;
 }
 .view-work-button{
 	display: inline-block;
-	color: #D8C4AC;
-	background-color: transparent;
+	color: #ffffff;
+	background-color: rgba(32,29,58, 0.2);
 	letter-spacing: 2px;
 	font-weight: bold;
 	padding: 10px 25px;
-	border: 2px solid #D8C4AC;
+	border: 2px solid #ffffff;
 	box-sizing: border-box;
 	transition: background-color 0.3s;
 }
 .view-work-button:hover{
-	background-color: #76323f;
-	color: #D8C4AC;
+	background-color: #ffffff;
+	color: #4cb69f;
 	text-decoration: none;
 }
 .fa-arrow-right{
@@ -60,39 +60,44 @@ body{
 }
 nav{
 	font-family: "Play", sans-serif;
-	background-color: #4B5054;
-	border-bottom: 2px solid #76323f;
+	background-color: #ffffff;
+	border-bottom: 2px solid #4cb69f;
+}
+.navbar-brand{
+	color: rgb(32,29,58) !important;
 }
 .name-logo, .title{
-	color: #76323f;
+	color: #4cb69f;
 	font-weight: bold;
 }
+
 .nav-item{
 	margin-right: 20px;
 }
 .nav-link{
 	transition: 0.3s;
 	font-size: 18px;
+	color: #201d3a !important;
 }
 .active > a{
-	color: #D8C4AC !important;
+	color: #4cb69f !important;
 }
 .active > .link-und{
     width: 60%;
 }
 .nav-link:hover{
-	color: #D8C4AC !important;
+	color: #4cb69f !important;
 }
 
 .disappear{
     display: none;
 }
 #about{
-	background-color: #d8c4ac;
+	background-color: #ffffff;
 	width: 100%;
 	min-height: 1100px;
 	text-align: center;
-	color: #252E35;
+	color: #201d3a;
 }
 .header-container{
 	display: inline-block;
@@ -109,16 +114,16 @@ nav{
 	border-radius: 30%;
 }
 .about-header{
-	color: #4B5054;
+	color: #201d3a;
 }
 .projects-header{
-	color: #4B5054;
+	color: #f5f5f5;
 }
 .about-underline{
-	background-color: #4B5054;
+	background-color: #201d3a;
 }
 .project-underline{
-	background-color: #4B5054;
+	background-color: #f5f5f5;
 }
 .work-cards-wrapper{
 	margin-top: -75px;
@@ -144,14 +149,14 @@ nav{
 .inner-inner-hex{
 	height: 230px;
 	width: 115px;
-	background-color: #76323f;
+	background-color: #4cb69f;
 	border-radius: 50%;
 	transform: rotate(-60deg);
 	visibility: visible;
 }
 .fa{
 	position: absolute;
-	color: #D8C4AC;
+	color: #ffffff;
 	top: 39%;
 	left: 30%;
 	font-size: 46px;
@@ -160,10 +165,10 @@ nav{
 }
 .card-heading{
 	margin-bottom: 10px;
-	color: #4B5054;
+	color: #4cb69f;
 }
 .card-detail{
-	color: #4B5054;
+	color: gray;
 }
 .fa-mobile-alt{
 	position: absolute;
@@ -207,8 +212,8 @@ nav{
 .inner-inner-pic-hex{
 	height: 600px;
 	width: 300px;
-	background-image: url(https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/22366466_10209444500082066_806576009659775303_n.jpg?_nc_cat=106&_nc_ht=scontent-ort2-1.xx&oh=9a6da949ab57e9fda54149b5379bc873&oe=5C649232);
-	background-position: top;
+	background-image: url(/images/Me.jpg);
+	background-position: right top;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-radius: 50%;
@@ -216,14 +221,14 @@ nav{
 	visibility: visible;
 }
 .sarcasm{
-	color: #4B5054;
+	color: #201d3a;
 }
 .my-disc{
-	color: #4B5054;
+	color: gray ;
 	text-align: justify;
 }
 .enf{
-	color: #76323f;
+	color: #4cb69f;
 }
 .skills-list{
 	margin-top: 50px;
@@ -235,15 +240,17 @@ nav{
 	display: grid;
 	grid-template-columns: 30% 58% 12%;
 	grid-template-areas: "sName perc perDisc";
-	background-color: #A18B7C;
+	background-color: #f5f5f5;
+	border-radius: 5px;
 	width: 100%;
 	height: auto;
 	margin-bottom: 20px;
 }
 .skill-name{
 	grid-area: sName;
-	background-color: #4B5054;
-	color: #D8C4AC;
+	background-color: #201d3a;
+	border-radius: 5px;
+	color: #ffffff;
 	padding-top: 10px;
 	box-sizing: border-box;
 	width: 100%;
@@ -280,12 +287,12 @@ nav{
 	grid-area: perc;
 	width: 0%;
 	height: 100%;
-	background-color: #76323f;
+	background-color: #4cb69f;
 	transition: width 0.5s ease-in-out;
 }
 .percentage{
 	grid-area: perDisc;
-	color: #4B5054;
+	color: #4cb69f;
 	height: 100%;
 	width: 100%;
 	padding-top: 10px;
@@ -295,8 +302,7 @@ nav{
 	width: 100%;
 	text-align: center;
 	min-height: 700px;
-	background-color: #A18B7C;
-	color: #D8C4AC;
+	background-color: rgba(32,29,58,0.7);
 }
 .project-filters-wrapper{
 	display: flex;
@@ -323,6 +329,7 @@ nav{
 }
 .project{
 	position: relative;
+	border: 2px solid #f5f5f5;
 	background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -348,12 +355,15 @@ nav{
 	height: 0;
 	width: 100%;
 	margin: 0;
-	background-color: #6D6967;
+	background-color: #f5f5f5;
 	overflow: hidden;
 	transition: all 0.2s ease;
 }
-.yelpcamp-image{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWqyIO3T9ttMEvi2gm4NKb1d4oSy6ThCJnKG_46FV-Y2yaT_I6");
+#yelpcamp{
+    background-image: url("/images/yelpcampPic.png");
+}
+#natureking{
+	background-image: url(/images/NatureKingWebsite.png);
 }
 .bottom-half{
     position: absolute;
@@ -362,42 +372,46 @@ nav{
 	height: 0;
 	width: 100%;
 	margin: 0;
-	background-color: #6D6967;
+	background-color: #f5f5f5;
 	transition: all 0.2s ease;
 }
 .project-name{
 	padding: 30px 0 5px;
+	color: #201d3a ;
 }
 .languages-used{
-	color: #76323f;
+	color: #4cb69f;
 }
 .learn-more-button{
 	position: relative;
 	top: 50px;
 	text-decoration: none !important;
 	padding: 10px 20px;
-	background-color: #D8C4AC;
-	color: #76323f;
-	border: 1px solid #76323f;
+	background-color: #f5f5f5;
+	font-weight: bold;
+	color: #201d3a;
+	border-radius: 4px;
+	border: 2px solid #201d3a;
 	transition: all 0.3s;
 }
 .learn-more-button:hover{
-	background-color: #76323f;
-	color: #D8C4AC;
+	background-color: #f5f5f5;
+	color: #4cb69f;
+	border: 2px solid #4cb69f;
 }
 #contact{
-	background-color: #6D6967;
+	background-color: #ffffff;
 	text-align: center;
 	min-height: 700px;
 }
 .contact-header{
-	color: #D8C4AC;
+	color: #201d3a;
 }
 .contact-underline{
-	background-color: #D8C4AC;
+	background-color: #201d3a;
 }
 .have-a-question{
-    color: #76323f;
+    color: #4cb69f;
 }
 form{
     margin: 0 auto 80px auto;
@@ -405,35 +419,41 @@ form{
 .inputs{
     width: 100%;
     margin-top: 5px;
-    background-color: #4B5054;
-    padding: 5px 10px;
+    background-color: #201d3a;
+    padding: 10px 14px;
+    border-radius: 4px;
     border: none;
-    color: #d8c4ac;
+    color: #f5f5f5;
 }
 textarea{
     height: 150px;
-    background-color: #4B5054;
-    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #201d3a;
+    padding: 10px 14px;
     border: none;
-    color: #d8c4ac;
+    color: #f5f5f5;
 }
 .form-button{
     float: right;
-    border: 2px solid #d8c4ac;
-    color: #d8c4ac;
-    background: #4B5054;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #201d3a;
 }
 .form-button:hover{
-	border-color: #6D6967;
-	color: #6D6967;
-	background-color: #d8c4ac;
+	border-color: #4cb69f;
+	color: #4cb69f;
+	background-color: #f5f5f5;
 
 }
 footer{
     position: relative;
     width: 100%;
     min-height: 200px;
-    background-color: #4B5054;
+    background-color: #f5f5f5;
     padding: 0;
     margin: 0;
 }
@@ -446,9 +466,10 @@ footer{
     transform: translate( -30px);
     height: 60px;
     width: 50px;
-    background-color: #76323f;
-    color: #252E35;
+    background-color: #201d3a;
+    color: #4cb69f;
     text-decoration: none;
+    transition: all 0.4;
 }
 .footer-to-home-button i{
 	position: absolute;
@@ -457,7 +478,7 @@ footer{
 	animation-name: shiftUp;
 	animation-duration: 0.5s;
 	animation-iteration-count: infinite;
-	color: #252E35;
+	color: #f5f5f5;
 } 
 @keyframes shiftUp{
 	0%{
@@ -480,7 +501,7 @@ footer{
     height: 70%;
     width: 20%;
     margin: 0 5px 0 5px;
-    background-color: #6D6967;
+    background-color: #f5f5f5;
 }
 .footer-link{
     position: relative;
@@ -490,20 +511,20 @@ footer{
     padding: 10px 0;
     height: 100%;
     width: 100%;
-    color: #D8C4AC;
+    color: #4cb69f;
     transition: all 0.5s;
 }
 .footer-list li:hover .footer-link{
     transform: rotateY(360deg);
-    color: #76323f;
+    color: #201d3a;
 }
 .closing p{
     text-align: center;
     font-weight: bolder;
-    color: #252E35;
+    color: #201d3a;
 }
 .closing p span{
-	color: #76323f;
+	color: #4cb69f;
 	margin-left: 5px;
 }
 

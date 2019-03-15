@@ -9,7 +9,7 @@ particlesJS("mainCanvas", {
       }
     },
     "color": {
-      "value": "#f3f7f8"
+      "value": "#4cb69f"
     },
     "shape": {
       "type": "circle",
@@ -49,7 +49,7 @@ particlesJS("mainCanvas", {
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#f3f7f8",
+      "color": "#4cb69f",
       "opacity": 0.4,
       "width": 1
     },
@@ -160,7 +160,7 @@ doc.on("scroll", function(){
       $(".projects-header").siblings().removeClass("disappear").addClass("fadeInRightBig");
     }
     if( doc.scrollTop() >= 2150 ){
-      $(".yelpcamp-image").removeClass("disappear").addClass("fadeInUp");
+      $(".project-image").removeClass("disappear").addClass("fadeInUp");
     }
     if( doc.scrollTop() >= 2700 ){
       $(".contact-header").removeClass("disappear").addClass("fadeInLeftBig");
@@ -223,7 +223,7 @@ doc.on("scroll", function(){
       $(".projects-header").siblings().removeClass("disappear").addClass("fadeInRightBig");
     }
     if( doc.scrollTop() >= 1720 ){
-      $(".yelpcamp-image").removeClass("disappear").addClass("fadeInUp");
+      $(".project-image").removeClass("disappear").addClass("fadeInUp");
     }
     if( doc.scrollTop() >= 2200 ){
       $(".contact-header").removeClass("disappear").addClass("fadeInLeftBig");
