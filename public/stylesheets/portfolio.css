@@ -135,7 +135,7 @@ nav{
 	font-weight: bold;
 }
 #name-logo{
-	height: 50px;
+	height: 48px;
 	width: 100px;
 	-webkit-clip-path: polygon(50% 41%, 100% 0, 100% 100%, 75% 100%, 75% 60%, 50% 100%, 25% 60%, 25% 100%, 0 100%, 0 0);
     clip-path: polygon(50% 41%, 100% 0, 100% 100%, 75% 100%, 75% 60%, 50% 100%, 25% 60%, 25% 100%, 0 100%, 0 0);
@@ -144,11 +144,12 @@ nav{
 	border: 2px solid #14CEE2;
 }
 .navbar-toggler{
-	border-color:  #14CEE2 !important;
+	border: 3px solid #14CEE2 !important;
+
 }
 .navbar-toggler i{
 	color: #14CEE2 !important;
-	font-size: 25px;
+	font-size: 26px;
 }
 
 .nav-item{
