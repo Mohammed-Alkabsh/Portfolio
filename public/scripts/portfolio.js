@@ -2,7 +2,7 @@
 particlesJS("mainCanvas", {
   "particles": {
     "number": {
-      "value": 40,
+      "value": 10,
       "density": {
         "enable": true,
         "value_area": 800
@@ -56,11 +56,11 @@ particlesJS("mainCanvas", {
     "move": {
       "enable": true,
       "speed": 5,
-      "direction": "none",
-      "random": false,
+      "direction": "down",
+      "random": true,
       "straight": false,
       "out_mode": "out",
-      "bounce": false,
+      "bounce": true,
       "attract": {
         "enable": false,
         "rotateX": 600,
@@ -110,16 +110,106 @@ particlesJS("mainCanvas", {
   "retina_detect": true
 });
 
-var doc = $(document);
-doc.on("scroll", function(){
-  console.log(screen.width);
-  console.log(doc.scrollTop());
-  if ( screen.width <= 600 ){
-    console.log("small screen");
-    if ( doc.scrollTop() >= 180){
-      $(".about-header").removeClass("disappear").addClass("fadeInLeftBig");
-    }
-    if (doc.scrollTop() >= 250){
+
+
+
+
+
+
+
+
+
+
+
+var words = document.getElementsByClassName('word');
+var wordArray = [];
+var currentWord = 0;
+
+words[currentWord].style.opacity = 1;
+for (var i = 0; i < words.length; i++) {
+  splitLetters(words[i]);
+}
+
+function changeWord() {
+  var cw = wordArray[currentWord];
+  var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+  for (var i = 0; i < cw.length; i++) {
+    animateLetterOut(cw, i);
+  }
+  
+  for (var i = 0; i < nw.length; i++) {
+    nw[i].className = 'letter behind';
+    nw[0].parentElement.style.opacity = 1;
+    animateLetterIn(nw, i);
+  }
+  
+  currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+}
+
+function animateLetterOut(cw, i) {
+  setTimeout(function() {
+        cw[i].className = 'letter out';
+  }, i*80);
+}
+
+function animateLetterIn(nw, i) {
+  setTimeout(function() {
+        nw[i].className = 'letter in';
+  }, 340+(i*80));
+}
+
+function splitLetters(word) {
+  var content = word.innerHTML;
+  word.innerHTML = '';
+  var letters = [];
+  for (var i = 0; i < content.length; i++) {
+    var letter = document.createElement('span');
+    letter.className = 'letter';
+    letter.innerHTML = content.charAt(i);
+    word.appendChild(letter);
+    letters.push(letter);
+  }
+  
+  wordArray.push(letters);
+}
+
+changeWord();
+setInterval(changeWord, 4000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(window).on("load resize", function(){
+  console.log("doc ready");
+  if ( screen.width >= 1000 ){
+    document.querySelector(".o-wrapper").innerHTML = "<div class='o'></div><div class='o'></div><div class='o'></div><div class='o'></div><div class='o'></div><div class='o'></div><div class='o'></div><div class='o'></div>";
+  }
+  else{
+      document.querySelector(".o-wrapper").innerHTML = "<div class='o'></div><div class='o'></div><div class='o'></div>";
+  }
+});
+
+
+$(document).on("scroll", function(){
+  
+  var doc = $(document);
+  if (doc.scrollTop() >= 250){
       $(".about-header").siblings().removeClass("disappear").addClass("fadeInLeftBig");
     }
     if (doc.scrollTop() >= 350){
@@ -180,7 +270,7 @@ doc.on("scroll", function(){
     
     
     
-  }else{
+  else{
     
     if ( doc.scrollTop() >= 300){
         $(".about-header").removeClass("disappear").addClass("fadeInLeftBig");
@@ -261,6 +351,7 @@ $(".footer-to-home-button").on("click", function(e){
     scrollTop: $(this.hash).offset().top
   }, 800);
 });
+
 $(window).on("scroll", function(){
   var scrollBarLocation = $(this).scrollTop();
   scrollLink.each(function(){
@@ -278,6 +369,7 @@ $(".project").on("mouseenter", function(){
     "opacity": "1"
   });
 });
+
 $(".project").on("mouseleave", function(){
   $(".project").children().css({
     "height": "0",
