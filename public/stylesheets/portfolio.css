@@ -452,14 +452,14 @@ nav{
 	transition: all 0.2s ease;
 }
 #yelpcamp{
-    background-image: url("/images/yelpcampPic.png");
+    background-image: url("/images/yelpcamp-website-pic.jpg");
 }
 #natureking{
-	background-image: url(/images/NatureKingWebsite.png);
+	background-image: url(/images/nature-king-website-pic.jpg);
 	animation-delay: 0.3s;
 }
 #marcs-fusion{
-	background-image: url(/images/Marcs-fusion-pic.jpg);
+	background-image: url(/images/marcs-fusion-website-pic.jpg);
 	animation-delay: 0.6s;
 	background-position: right;
 }
