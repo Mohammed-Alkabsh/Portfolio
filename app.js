@@ -12,7 +12,7 @@ var express = require("express"),
 //Connecting to Mlab mongodb
 mongoose.connect(process.env.DATAURL, {useNewUrlParser: true});
 app.use(require("express-session")({
-    secret: "Don't, hate on a nigga... that is a weak emotion, the lady in a nigga.",
+    secret: "No risk, no reward.",
     resave: false,
     saveUninitialized: false
 }));
