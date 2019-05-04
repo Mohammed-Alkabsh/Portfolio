@@ -458,6 +458,11 @@ nav{
 	background-image: url(/images/NatureKingWebsite.png);
 	animation-delay: 0.3s;
 }
+#marcs-fusion{
+	background-image: url(/images/Marcs-fusion-pic.jpg);
+	animation-delay: 0.6s;
+	background-position: right;
+}
 .bottom-half{
     position: absolute;
     opacity: 0;
