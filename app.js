@@ -8,9 +8,9 @@ var express = require("express"),
     app = express();
     
 //connecting to mongoDB
-//mongoose.connect("mongodb://localhost/portfolio", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost/portfolio", {useNewUrlParser: true});
 //Connecting to Mlab mongodb
-mongoose.connect(process.env.DATAURL, {useNewUrlParser: true});
+//mongoose.connect(process.env.DATAURL, {useNewUrlParser: true});
 app.use(require("express-session")({
     secret: "No risk, no reward.",
     resave: false,

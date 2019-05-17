@@ -240,7 +240,7 @@ nav{
 	transform: rotate(-60deg);
 	visibility: visible;
 }
-.fa{
+.fa, .fa-bolt{
 	position: absolute;
 	color: #f5f5f5;
 	top: 39%;
@@ -248,6 +248,10 @@ nav{
 	font-size: 46px;
 	transform: translate(-50%, -50%);
 	transform: rotate(30deg);
+}
+.fa-bolt{
+	top: 40%;
+	left: 40%;
 }
 .card-heading{
 	margin-bottom: 10px;
