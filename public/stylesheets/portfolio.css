@@ -455,8 +455,8 @@ nav{
 	overflow: hidden;
 	transition: all 0.2s ease;
 }
-#yelpcamp{
-    background-image: url("/images/yelpcamp-website-pic.jpg");
+#scojo{
+    background-image: url(/images/scojo_new_york.jpg);
 }
 #natureking{
 	background-image: url(/images/nature-king-website-pic.jpg);

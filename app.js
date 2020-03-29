@@ -8,7 +8,11 @@ var express = require("express"),
     app = express();
     
 //connecting to mongoDB
-mongoose.connect(process.env.DATAURL || "mongodb://localhost/portfolio", {useNewUrlParser: true});
+mongoose.connect(process.env.DATAURL || "mongodb://localhost/portfolio", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
 app.use(require("express-session")({
     secret: "No risk, no reward.",
     resave: false,
