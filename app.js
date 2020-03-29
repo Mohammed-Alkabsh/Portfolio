@@ -8,9 +8,7 @@ var express = require("express"),
     app = express();
     
 //connecting to mongoDB
-//.connect("mongodb://localhost/portfolio", {useNewUrlParser: true});
-//Connecting to Mlab mongodb
-mongoose.connect(process.env.DATAURL, {useNewUrlParser: true});
+mongoose.connect(process.env.DATAURL || "mongodb://localhost/portfolio", {useNewUrlParser: true});
 app.use(require("express-session")({
     secret: "No risk, no reward.",
     resave: false,
@@ -83,7 +81,8 @@ app.post("/", function(req, res){
         }
     }, function(err, customer){
         if(err){
-            console.log(err);
+            req.flash("error", err);
+            res.redirect("/");
         }
         else{
             req.flash("success", "Your message has been sent");
@@ -133,7 +132,7 @@ app.get("/dash", isLoggedIn, function(req, res){
         else{
             Customer.find({}, function(err, customer){
                 if(err){
-                    console.log(err);
+                    req.flash("error", err)
                     res.redirect("back");
                 }
                 else{
@@ -167,6 +166,6 @@ function isLoggedIn(req, res, next){
 
 
 //connecting to host
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(process.env.PORT || 3000, process.env.IP, function(){
     console.log("Your app is served!");
 });
