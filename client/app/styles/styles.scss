@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@import "libraries/bootstrap.min.css";
+@import "vendor/mixins";
+@import "vendor/fonts";
+@import "vendor/global";
+@import "vendor/header";
+@import "vendor/auth-forms";
+
+.hero-content {
+  height: 100vh;
+}

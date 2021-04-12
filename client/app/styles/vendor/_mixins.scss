@@ -1,0 +1,165 @@
+//Mixins
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity = $opacity-ie); //IE8
+}
+
+//Media Quaries Mixin
+@mixin screen($size) {
+  $desktop: "(min-width: 992px)";
+  $tablet: "(min-width: 769px) and (max-width: 991)";
+  $mobile: "(max-width: 768px)";
+  @if $size == desktop {
+    @media only screen and #{$desktop} {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media only screen and #{$tablet} {
+      @content;
+    }
+  } @else if $size == mobile {
+    @media only screen and #{$mobile} {
+      @content;
+    }
+  } @else {
+    @media only screen and #{$size} {
+      @content;
+    }
+  }
+}
+
+//Usage:
+// .wrapper {
+//   margin: 0 auto;
+//   width: 100%;
+//   @include screen('tablet') {
+//     width: 90%;
+//   }
+
+//   @include screen('desktop') {
+//     width: 85%;
+//   }
+// }
+
+//Keyframes Mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+//Usage:
+// @include keyframes(animate) {
+//   50% {
+//     transform: rotate(90deg);
+//   }
+//   100% {
+//     transform: rotate(-90deg);
+//   }
+// }
+
+// Linear Gradient Mixin
+@mixin gradient($start-color, $end-color, $orientation) {
+  background: $start-color;
+  @if $orientation == "vertical" {
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to bottom, $start-color, $end-color);
+  } @else if $orientation == "horizontal" {
+    background: -webkit-linear-gradient(left, $start-color, $end-color);
+    background: linear-gradient(to right, $start-color, $end-color);
+  } @else {
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      $start-color,
+      $end-color
+    );
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
+}
+
+//Usage:
+// .gradient {
+//   @include gradient(#07c, #06f, vertical);
+// }
+
+//Font-Face Mixin
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-name + ".eot");
+    src: url($file-name + ".eot?#iefix") format("embedded-opentype"),
+      url($file-name + ".woff") format("woff"),
+      url($file-name + ".ttf") format("truetype"),
+      url($file-name + ".svg##{$font-name}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+//Usage
+//@include font-face("MyFont", "path/to/MyFont", $style: normal, $weight: normal);
+
+//Centering Mixin
+@mixin center-absolutely {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
+//Usage:
+// .vc-box {
+//   @include center-vertically;
+// }
+
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+// Rotate
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+// Translate
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+// Skew
+@mixin skew($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin transition($prop) {
+  -webkit-transition: $prop;
+  -moz-transition: $prop;
+  -ms-transition: $prop;
+  transition: $prop;
+}

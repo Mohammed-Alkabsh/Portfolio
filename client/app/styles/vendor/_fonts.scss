@@ -1,0 +1,34 @@
+@import "../../../public/assets/fonts/Nunito/Nunito-Black.ttf";
+@import "../../../public/assets/fonts/Nunito/Nunito-BlackItalic.ttf";
+@import "../../../public/assets/fonts/Nunito/Nunito-Bold.ttf";
+@import "../../../public/assets/fonts/Nunito/Nunito-Regular.ttf";
+@import "../../../public/assets/fonts/Nunito/Nunito-BoldItalic.ttf";
+@import "../../../public/assets/fonts/Nunito/Nunito-ExtraLight.ttf";
+@import "../../../public/assets/fonts/Nunito/Nunito-ExtraLightItalic.ttf";
+@import "../../../public/assets/fonts/Nunito/Nunito-Italic.ttf";
+@import "../../../public/assets/fonts/Nunito/Nunito-Light.ttf";
+@import "../../../public/assets/fonts/Nunito/Nunito-LightItalic.ttf";
+@import "../../../public/assets/fonts/Nunito/Nunito-SemiBold.ttf";
+@import "../../../public/assets/fonts/Nunito/Nunito-SemiBoldItalic.ttf";
+
+.cls-1,
+.cls-2 {
+  fill: #48acf0;
+}
+.cls-2 {
+}
+.cls-3 {
+  fill: #fff;
+}
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-1 *,
+.cls-2 *,
+.cls-3 * {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: neuropol-nova, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
